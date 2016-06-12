@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="849.0" styleClass="welcome_page" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatclient.clientController">
+   <children>
+      <HBox prefHeight="47.0" prefWidth="800.0" styleClass="welcome_page" AnchorPane.bottomAnchor="553.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar prefHeight="47.0" prefWidth="847.0" styleClass="menuBar">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="47.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <SplitPane layoutX="132.0" layoutY="56.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="613.0">
+                     <children>
+                        <Pane prefHeight="469.0" prefWidth="629.0" styleClass="welcome_page" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane layoutY="62.0" prefHeight="410.0" prefViewportHeight="403.0" prefViewportWidth="629.0" prefWidth="654.0">
+                                 <content>
+                                    <TextArea fx:id="textAreaFieldDisplayMessage" layoutY="67.0" prefHeight="403.0" prefWidth="654.0" wrapText="true" />
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="textMessageField" layoutY="709.0" onKeyPressed="#sentMessageFromTextField" prefHeight="58.0" prefWidth="631.0" />
+                              <Button fx:id="sentMessageBtn" layoutX="641.0" layoutY="715.0" mnemonicParsing="false" onAction="#sentMessagetServer" prefHeight="47.0" prefWidth="147.0" styleClass="menuBar" stylesheets="@main.css" text="Send Message">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnDisconnectFromServer" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onAction="#disconnectServer" prefHeight="38.0" prefWidth="136.0" stylesheets="@main.css" text="Disconnect ">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnConnectServer" layoutX="474.0" layoutY="15.0" mnemonicParsing="false" onAction="#connectToServer" prefHeight="38.0" prefWidth="147.0" styleClass="menuBar" stylesheets="@main.css" text="Connect to Server">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="portNumberField" layoutX="653.0" layoutY="175.0" prefHeight="38.0" prefWidth="189.0" />
+                              <Label layoutX="671.0" layoutY="131.0" prefHeight="38.0" prefWidth="136.0" text="    Port Number" />
+                              <TextField fx:id="serverAddressField" layoutX="654.0" layoutY="278.0" prefHeight="38.0" prefWidth="189.0" />
+                              <Label layoutX="680.0" layoutY="229.0" prefHeight="38.0" prefWidth="136.0" text="   Server Address" />
+                              <Label fx:id="userNameLabel" layoutX="85.0" layoutY="5.0" prefHeight="47.0" prefWidth="299.0" text="          Welcome  Anonymous" />
+                              <TextArea fx:id="eventClientTextArea" editable="false" layoutX="-1.0" layoutY="481.0" prefHeight="191.0" prefWidth="654.0" />
+                              <TextArea fx:id="userListPanelClient" editable="false" layoutX="667.0" layoutY="358.0" prefHeight="266.0" prefWidth="176.0" visible="false" />
+                              <Button fx:id="viewUserOnlineBtn" layoutX="667.0" layoutY="641.0" mnemonicParsing="false" onAction="#viewOnlineUsers" prefHeight="33.0" prefWidth="176.0" styleClass="menuBar" text="View User Onlines" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
