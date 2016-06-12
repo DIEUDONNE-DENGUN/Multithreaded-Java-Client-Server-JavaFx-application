@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="800.0" styleClass="welcome_page" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.serverController">
+   <children>
+      <HBox prefHeight="47.0" prefWidth="800.0" styleClass="welcome_page" AnchorPane.bottomAnchor="553.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar prefHeight="47.0" prefWidth="799.0" styleClass="menuBar">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="47.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <SplitPane dividerPositions="0.794228356336261" layoutX="132.0" layoutY="56.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="613.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="469.0" prefWidth="629.0" styleClass="welcome_page" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane layoutY="67.0" prefViewportHeight="403.0" prefViewportWidth="629.0">
+                                 <content>
+                                    <TextArea fx:id="textAreaFieldDisplayMessage" layoutY="67.0" prefHeight="403.0" prefWidth="629.0" wrapText="true" />
+                                 </content>
+                              </ScrollPane>
+                              <TextArea fx:id="eventTextArea" layoutX="-1.0" layoutY="472.0" prefHeight="200.0" prefWidth="631.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="469.0" prefHeight="76.0" prefWidth="629.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button fx:id="btnStartServer" layoutX="315.0" layoutY="31.0" mnemonicParsing="false"  onMouseClicked="#startServer" prefHeight="38.0" prefWidth="128.0" styleClass="menuBar" stylesheets="@main.css" text="Start Server">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnStopServer" layoutX="487.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#stopServer" prefHeight="38.0" prefWidth="128.0" stylesheets="@main.css" text="Stop Server">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="welcome_page" stylesheets="@main.css">
+                     <children>
+                        <ListView fx:id="listViewUsers" layoutX="-3.0" layoutY="68.0" prefHeight="405.0" prefWidth="167.0" AnchorPane.bottomAnchor="274.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="68.0" />
+                        <Label layoutX="1.0" layoutY="14.0" prefHeight="47.0" prefWidth="160.0" styleClass="welcome_page" stylesheets="@main.css" text=" Current User Chat List" />
+                        <TextField fx:id="portNumberServer" layoutX="2.0" layoutY="702.0" prefHeight="38.0" prefWidth="153.0" />
+                        <Label layoutX="5.0" layoutY="648.0" prefHeight="38.0" prefWidth="153.0" text="Port Number" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
