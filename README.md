@@ -1,4 +1,4 @@
-# Mulitple Client Chatting Room Java FX Application
+# Mulitple Client Chat Room Java FX Application
 This is a simple chat room application developed on the JAVA FX technology. 
 It has realtime monitoring of all clients who was connected to the server application. 
 The application has a clean, user-friendly user interface built with the  bootstrap framework as custom styling to the FX app
